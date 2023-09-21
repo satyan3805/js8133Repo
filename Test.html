@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+    const pi= 3.14;
+    const vechicle ={noOfTyres:4, color:"RED", fuelType:"Petrol", 
+                    test: function(){ console.log("TEST FUNCTION");
+                return "Its a car!!"; }
+                };
+    const arr = ["sat", "mon","tue"];
+    //arr = ["sat", "mon","tue"];
+
+    arr[0]= "tue";
+
+    //pi=3.24;
+
+    console.log("vehicle Color is: "+vechicle.color);
+    console.log("vehicle fuel is: "+vechicle["fuelType"]);
+
+    vechicle.color = "BLUE";
+    console.log("vehicle Color is: "+vechicle.color);
+    //vechicle.test();
+    console.log("vehicle test is: "+vechicle.test());
+
+</script>
+
+</body>
+</html>
