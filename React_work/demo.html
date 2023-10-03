@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo HTML</title>
+</head>
+<body>
+    <div id="root">
+       <h1 id="" name="" class=""> HEAD FROM HTML</h1>
+    </div>
+    
+    
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script>
+        // var hOne = document.createElement("select");
+        // hOne.innerHTML = "REACT DEMO CLASS using JS";
+        // var rootElement = document.getElementById("root");
+        // rootElement.appendChild(hOne);
+        // rootElement.append(hOne);
+        let reactHeadOne = React.createElement("h1",{},"Head Content");
+        var pElement =     React.createElement("i",{},"Paragraph tag content");
+        
+        var rootElement = document.getElementById("root");
+        var rootCont = ReactDOM.createRoot(rootElement);
+        rootCont.render(reactHeadOne);
+        rootCont.render(pElement);
+
+    </script>
+
+
+    <script>
+
+    </script>
+
+<script>
+
+</script>
+
+<script>
+
+
+</script>
+
+</body>
+</html>

@@ -6,6 +6,13 @@
 <p id="demo"></p>
 
 <script>
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+
+    }
+    xhttp.open("GET", "http://localhost:8080/CountryServlet/CountryServlet");
+    xhttp.send();
+/*
     const pi= 3.14;
     const vechicle ={noOfTyres:4, color:"RED", fuelType:"Petrol", 
                     test: function(){ console.log("TEST FUNCTION");
@@ -25,7 +32,7 @@
     console.log("vehicle Color is: "+vechicle.color);
     //vechicle.test();
     console.log("vehicle test is: "+vechicle.test());
-
+*/
 </script>
 
 </body>
