@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+
+  <select id="countryList">
+    <option></option>
+    <option>India</option>
+    <option>afgan</option>
+    <option>srilanka</option>
+    <option>iran</option>
+    <option>iraq</option>
+    <option>pakistan</option>
+    <option>bangla</option>
+    <option>nepal</option>
+    <option>china</option>
+    <option>france</option>
+    <option>italy</option>
+    <option>denmark</option>
+    <option>poland</option>
+    <option>greece</option>
+    <option>singapoor</option>
+    <option>malesia</option>
+    <option>omar</option>
+    <option>quatar</option>
+    <option>dubai</option>
+    <option>khazikistan</option>
+  </select>
+  <input type="text" id="searchTxt" onkeyup="filterCountries()">
+
+
+  <script>
+
+    function filterCountries() {
+      //get search String from input text box
+      var searchTxt = document.getElementById("searchTxt");
+      //conver search string to upper case to filter without case sensitivity
+      var filter = searchTxt.value.toUpperCase();
+      //get select element
+      var selElement = document.getElementById("countryList");
+      // all children elements(options) of select element
+      var optElement = selElement.children;
+      //loop through each children element
+      for (i = 0; i < optElement.length; i++) {
+        //get option innerText / inner HTML both will work. i am using inner HTML
+        optionTxt = optElement[i].innerHTML;
+        // verify option inner text is started with searchTxt or not.
+        if (optionTxt.toUpperCase().startsWith(filter)) {
+          //if option inner text is started with searchTxt set option element style display as nothing
+          optElement[i].style.display = "";
+        } else {
+          //if option inner text is started with searchTxt set option element style display as none.
+          optElement[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+
+</body>
+
+</html>
